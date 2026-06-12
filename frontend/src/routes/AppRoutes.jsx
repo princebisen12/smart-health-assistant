@@ -1,0 +1,39 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import Dashboard from "../pages/Dashboard";
+import SymptomChecker from "../pages/SymptomChecker";
+import Chatbot from "../pages/Chatbot";
+import ReportUpload from "../pages/ReportUpload";
+import NotFound from "../pages/NotFound";
+
+function AppRoutes() {
+  return (
+    <BrowserRouter>
+
+      <Routes>
+
+        <Route path="/" element={<Login />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/symptoms" element={<SymptomChecker />} />
+
+        <Route path="/chatbot" element={<Chatbot />} />
+
+        <Route path="/reports" element={<ReportUpload />} />
+
+        <Route path="*" element={<NotFound />} />
+
+      </Routes>
+
+    </BrowserRouter>
+  );
+}
+
+export default AppRoutes;
